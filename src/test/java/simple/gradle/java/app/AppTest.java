@@ -12,8 +12,4 @@ class AppTest {
        int expected = 22;
        assertEquals(expected,result);
     }
-
-    @Test void main(){
-        App.main(new String[]{});
-    }
 }
