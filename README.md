@@ -31,3 +31,6 @@ The application can be run using the following command
 
 After the Application is built using the Build command, the test results report can be found in below file
 *build/reports/tests/test/index.html*
+<img width="1451" alt="Screenshot 2024-05-20 at 1 53 07 PM" src="https://github.com/adiyaar24/Simple-Gradle-Project/assets/122971747/a3f1da7e-4b18-4c2e-be4a-934bffb95200">
+
+
