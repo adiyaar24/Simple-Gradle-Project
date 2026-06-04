@@ -6,35 +6,31 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: Build
-        identifier: Build
+        name: Custom
+        identifier: Custom
         description: ""
-        type: CI
+        type: Custom
         spec:
-          cloneCodebase: true
-          platform:
-            os: Linux
-            arch: Amd64
-          runtime:
-            type: Cloud
-            spec: {}
           execution:
             steps:
               - step:
-                  type: Run
-                  name: Run_1
-                  identifier: Run_1
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
                   spec:
-                    shell: Sh
-                    command: echo "Hi"
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hi"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
   variables:
     - name: hello
       type: String
       description: ""
       required: true
       value: <+input>
-  properties:
-    ci:
-      codebase:
-        repoName: account.flyway_db_schema
-        build: <+input>
