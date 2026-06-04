@@ -1,5 +1,6 @@
 inputSet:
   name: inputset1
+  tags: {}
   identifier: inputset1
   orgIdentifier: default
   projectIdentifier: Gitops
@@ -9,3 +10,10 @@ inputSet:
       - name: hello
         type: String
         value: inputset1
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
