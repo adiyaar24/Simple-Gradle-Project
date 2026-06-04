@@ -1,0 +1,11 @@
+inputSet:
+  name: inputset1
+  identifier: inputset1
+  orgIdentifier: default
+  projectIdentifier: Gitops
+  pipeline:
+    identifier: samplepipeline
+    variables:
+      - name: hello
+        type: String
+        value: inputset1
